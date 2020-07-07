@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC -"//W3C//DTD XHTML1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://wwww.w3.org/1999/xhtml">
+<head>
+<script type="text/javscript">
+function validate_password()
+{
+  
+  var str=document.getElementById("passwd");
+  var result=str.value.search(/^[a-zA-Z]\w{4,4}$/);
+  if(result!=0)
+  {
+  alert("invalid password");
+  }
+  else
+  {
+  alert("valid password");
+  }
+}
+  </script>
+  </head>
+  <body>
+  <form>
+  enter password:<input type="password" id="passwd"/>
+  <br/><br/>
+  <input type="button" Onclick="validate_password()" value="submit"/>
+  <input type="reset" value="reset"/>
+  </form>
+  </body>
+  </html>
+  

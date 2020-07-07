@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC -"//W3C//DTD XHTML1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> stacking the element</title>
+<link rel="stylesheet" type="text/css" href="1.css"/>
+<script type="text/javascript">
+var topLayer="third";
+var origpos;
+function my_fun(toTop,pos)
+{
+ var newTop=document.getElementById(toTop).style;
+ newTop.zIndex="100";
+ topLayer=document.getElementById(toTop).id;
+ origpos=pos;
+ }
+ 
+ function my_fun1()
+ {
+ document.getElementById(topLayer).style.zIndex=origpos;
+ }
+ </script>
+ </head>
+ <body>
+ <span class="text1" id="first" onmouseover="my_fun('first','5')"  onmouseout="my_fun1();">hi this idiot puttu</span>
+ <span class="text2" id="second" onmouseover="my_fun('second','2')" onmouseout="my_fun1();">hi this idiot puttugirlfrind also idiot </span>
+ <span class="text3" id="third" onmouseover="my_fun('third','3')" onmouseout="my_fun1();">hi this idiot puttuxgirl frind also idiot </span>
+ </body>
+ </html>
